@@ -21,6 +21,8 @@ Route::get('/', function () {
 
 Route::get('user', [PageController::class,'User'])->name('user');
 Route::get('admin', [PageController::class, 'Admin'])->name('admin');
+Route::get('aaa', [PageController::class, 'Admin'])->name('aaa');
+
 
 
 
@@ -31,7 +33,7 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', function () {
 
-        
+
         return view('dashboard');
     })->name('dashboard');
 });
